@@ -1,0 +1,19 @@
+<div class="container">
+    <form [formGroup]="loginform"  (submit)="login()">
+    <div  style="margin:20px" class="page">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Username</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username" formControlName="username">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleFormControlTextarea1" placeholder="Password" formControlName="password">
+      </div>
+
+      <input type="submit" class="btn btn-success">
+
+      </div>
+
+    </form>
+
+</div>

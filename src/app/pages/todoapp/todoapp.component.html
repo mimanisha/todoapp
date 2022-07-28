@@ -1,0 +1,12 @@
+<div class="container">
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand">Wel-come {{this._state.user['full_name']}} </a>
+      <form class="d-flex" role="search">
+        <button class="btn btn-danger" (click)="logout()">Logout</button>
+      </form>
+    </div>
+  </nav>
+</div>
+<router-outlet></router-outlet>
+

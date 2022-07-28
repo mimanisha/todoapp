@@ -1,0 +1,22 @@
+<div class="container">
+    <ul>
+        <li  style="list-style: number;" *ngFor="let todo of this._state.todos">
+        <input type="checkbox"
+        (change)="change_status(todo['id'],todo['is_done'] == 1 ? 0:1)"
+        [checked]="todo ['is_done'] == 1 ? true:false">
+        
+        {{todo['task']}}
+        
+            <div style="float: right;">
+                <button type="button" (click)="edit(todo['id'], todo['task'])" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-pencil-square"></i></button>
+                <button  type="button" (click)="delete(todo['id'])" class="btn btn-sm btn-outline-danger">
+                    <i class="bi bi-trash"></i>
+                </button>
+            </div>
+        
+        </li>
+        <li style="list-style: none;">
+            <button (click)="add()" class="btn btn-outline-success">+Add new task</button></li>
+        </ul>
+</div>
